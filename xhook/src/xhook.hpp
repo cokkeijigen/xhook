@@ -176,6 +176,7 @@ namespace xhook
     xhook_declare_caller(cdecl_t , __cdecl   );
     xhook_declare_caller(stdcall , __stdcall );
     xhook_declare_caller(fastcall, __fastcall);
+    xhook_declare_caller(thiscall, __thiscall);
     
     #ifdef WINAPI
     xhook_declare_caller(winapi, WINAPI);
