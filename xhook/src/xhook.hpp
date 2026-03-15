@@ -190,7 +190,7 @@ namespace xhook
         func_t&& function;
 
         constexpr entry(sym_t&& _symbol, func_t&& _function) noexcept :
-              symbol{ std::forward<sym_t> (_symbol)   },
+              symbol{ std::forward<sym_t >(_symbol  ) },
             function{ std::forward<func_t>(_function) }
         {
         }
