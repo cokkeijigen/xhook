@@ -18,7 +18,10 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
 
-	set(CMAKE_CXX_FLAGS_RELEASE "/O1 /Ob2 /DNDEBUG")
+	string(REPLACE "/O2" "/O1" 
+        CMAKE_CXX_FLAGS_RELEASE
+        ${CMAKE_CXX_FLAGS_RELEASE}
+    )
 	add_compile_options(
         "/source-charset:utf-8"
         "$<$<CONFIG:Release>:/GF>"
