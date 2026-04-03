@@ -1,4 +1,4 @@
-# XHook — A ~~useless toy~~ utility library built with Modern C++
+# XHook — A ~~useless toy~~ utility library built with Modern C++ and Detours
 
 <div align="center"> 
 	<a href="https://github.com/cokkeijigen/xhook/blob/master/README.md">简体中文</a> | 
