@@ -75,7 +75,7 @@ auto main(int, char**) -> int
 	// 测试
 	test(11, 45, 14);
     
-    //删除hook
+    //解除hook
     xhook::target<test_hook>::unhook();
 	return {};
 }
@@ -87,7 +87,7 @@ auto main(int, char**) -> int
 xhook::hooker::add</* 将替换的函数作为模板参数 */>(/* 目标函数地址 */);
 // 调用原函数
 xhook::hooker::call</* 将替换的函数作为模板参数 */>(...);
-// 删除hook
+// 解除hook
 xhook::hooker::del</* 将替换的函数作为模板参数 */>();
 ```
 ```cpp
@@ -114,7 +114,7 @@ auto main(int, char**) -> int
 	// 测试
 	test(11, 45, 14);
 
-    xhook::hooker::del<test_hook>(); // 删除hook
+    xhook::hooker::del<test_hook>(); // 解除hook
 	return {};
 }
 ```
@@ -187,7 +187,7 @@ auto main(int, char**) -> int
 	object.m_str = "u'r the dragon?";
 	object.test2(0x114510, 0x04);
     
-    //删除hook
+    //解除hook
     xhook::target<&my_object2::test1>::unhook();
 	xhook::hooker::del<&my_object::test2>();
     
