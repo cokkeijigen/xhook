@@ -420,9 +420,9 @@ auto main(int, char**) -> int
 	auto orgMessageBoxW = user32_dll &= xhook::symstr{ "MessageBoxW" } ->* xhook::target<MessageBoxW_Hook>{};
 
 	// Or use this way
-	// auto orgMessageBoxA   = user32_dll.add_hook<MessageBoxA_Hook>("MessageBoxA");
-	// auto orgMessageBoxW   = user32_dll.add_hook<MessageBoxW_Hook>("MessageBoxW");
-	// auto orgMessageBoxExW = user32_dll.add_hook<MessageBoxExW_Hook>("MessageBoxExW");
+	// user32_dll.add_hook<MessageBoxA_Hook>("MessageBoxA");
+	// user32_dll.add_hook<MessageBoxW_Hook>("MessageBoxW");
+	// user32_dll.add_hook<MessageBoxExW_Hook>("MessageBoxExW");
 
 	// Test
 	::MessageBoxA  (NULL,  "Hello Neko",  "Nekonya~",  MB_YESNO | MB_ICONQUESTION);
