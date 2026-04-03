@@ -395,11 +395,6 @@ auto main(int, char**) -> int
 	auto orgMessageBoxA = user32_dll.add_hook("MessageBoxA"_sym ->* xhook::target<MessageBoxA_Hook>{});
 	auto orgMessageBoxW = user32_dll &= xhook::symstr{ "MessageBoxW" } ->* xhook::target<MessageBoxW_Hook>{};
 
-	// 也可通过这种方式
-	// auto orgMessageBoxA   = user32_dll.add_hook<MessageBoxA_Hook>("MessageBoxA");
-	// auto orgMessageBoxW   = user32_dll.add_hook<MessageBoxW_Hook>("MessageBoxW");
-	// auto orgMessageBoxExW = user32_dll.add_hook<MessageBoxExW_Hook>("MessageBoxExW");
-
 	// 测试
 	::MessageBoxA  (NULL,  "Hello Neko",  "Nekonya~",  MB_YESNO | MB_ICONQUESTION);
 	::MessageBoxW  (NULL, L"Neko World",  L"Nyanko~",  MB_YESNO | MB_ICONQUESTION);
