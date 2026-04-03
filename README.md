@@ -1,4 +1,4 @@
-# XHook - 一个基于现代CPP与Detours封装的~~小玩具~~（库）
+# XHook - 一个基于现代CPP封装的~~小玩具~~（库）
 <p align="center"> 
 	<a href="https://github.com/cokkeijigen/xhook/blob/master/README.md">简体中文</a> | 
 	<a href="https://github.com/cokkeijigen/xhook/blob/master/README_EN.md">English</a> <br>
