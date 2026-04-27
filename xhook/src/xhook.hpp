@@ -1071,7 +1071,7 @@ namespace xhook
     /**/        {                                                                                     \
     /**/        }                                                                                     \
     /**/    };                                                                                        \
-    /*************************************************************************************************/
+    /**[xhook_declare_invoke_caller]******************************************************************/
 
     #ifdef _M_IX86
     xhook_declare_invoke_caller(__cdecl   )
@@ -1465,7 +1465,7 @@ namespace xhook
             return indexer::template get_index_if_exists<func>();
         }
 
-        const char* syms[sizeof...(T)]{};
+        const char*   syms[sizeof...(T)]{};
         mutable void* ptrs[sizeof...(T)]{};
 
     public:
@@ -1556,8 +1556,8 @@ namespace xhook
     concept symbol_entry_types = requires(sym_t symbol)
     {
         { symbol.data } -> std::convertible_to<const char*>;
-        //requires xhook::is_xhook_function<func_t> || xhook::is_function_pointer<func_t>;
-        //requires !std::is_same_v<typename xhook::fnsig<func_t>::type, void>;
+        requires xhook::is_xhook_function<func_t> || xhook::is_function_pointer<func_t>;
+        requires !std::is_same_v<typename xhook::fnsig<func_t>::type, void>;
     };
 
     template <class sym_t, class func_t>
